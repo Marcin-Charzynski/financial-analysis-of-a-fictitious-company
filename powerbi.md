@@ -5,7 +5,7 @@
 
 ```markdown
 ---
-layout: pages
+layout: page
 title: Power BI
 permalink: /powerbi/
 ---
