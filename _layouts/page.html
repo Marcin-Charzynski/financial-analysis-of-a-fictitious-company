@@ -18,27 +18,27 @@
 <body class="min-h-screen flex flex-col">
 
   <!-- Navigation -->
-  <nav class="bg-white shadow-md">
+    <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
+        <a href="{{ site.baseurl }}/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
         Finance Portfolio
-      </a>
-      <ul class="flex space-x-6 text-gray-600">
+        </a>
+        <ul class="flex space-x-6 text-gray-600">
         <li>
-          <a href="/" 
-             class="hover:text-indigo-600 {% if page.url == '/' or page.url == '/index.html' %}font-bold text-indigo-700{% endif %}">
-             Home
-          </a>
+            <a href="{{ site.baseurl }}/" 
+            class="hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
+            Home
+            </a>
         </li>
         <li>
-          <a href="/charts/" 
-             class="hover:text-indigo-600 {% if page.url == '/charts/' %}font-bold text-indigo-700{% endif %}">
-             Charts
-          </a>
+            <a href="{{ site.baseurl }}/charts/" 
+            class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/charts/' %}font-bold text-indigo-700{% endif %}">
+            Charts
+            </a>
         </li>
-      </ul>
+        </ul>
     </div>
-  </nav>
+    </nav>
 
   <!-- Main content container -->
   <main class="flex-grow container mx-auto px-6 py-8 max-w-4xl">
