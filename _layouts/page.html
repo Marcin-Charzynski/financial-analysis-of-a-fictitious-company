@@ -5,36 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} - Financial Portfolio</title>
   
-  <!-- Tailwind CDN for quick use -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- PrismJS for syntax highlighting -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-vba.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
   
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-800 font-sans leading-relaxed antialiased">
 
   <!-- Navigation -->
-    <nav class="bg-white shadow-md">
+  <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="{{ site.baseurl }}/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
+      <a href="{{ site.baseurl }}/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
         Finance Portfolio
-        </a>
-        <ul class="flex space-x-6 text-gray-600">
+      </a>
+      <ul class="flex space-x-6 text-gray-600">
         <li>
-            <a href="{{ site.baseurl }}/" 
-            class="hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ site.baseurl }}/" 
+             class="hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
             Home
-            </a>
+          </a>
         </li>
         <li>
-            <a href="{{ site.baseurl }}/charts/" 
-            class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/charts/' %}font-bold text-indigo-700{% endif %}">
-            Charts
-            </a>
+          <a href="{{ site.baseurl }}/excel-vba/" 
+             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/excel-vba/' %}font-bold text-indigo-700{% endif %}">
+            Excel VBA
+          </a>
         </li>
-        </ul>
+        <li>
+          <a href="{{ site.baseurl }}/sql-analysis/" 
+             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/sql-analysis/' %}font-bold text-indigo-700{% endif %}">
+            SQL Analysis
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/powerbi-dashboard/" 
+             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/powerbi-dashboard/' %}font-bold text-indigo-700{% endif %}">
+            Power BI
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/resume/" 
+             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/resume/' %}font-bold text-indigo-700{% endif %}">
+            Resume
+          </a>
+        </li>
+      </ul>
     </div>
-    </nav>
+  </nav>
 
-  <!-- Main content container -->
+  <!-- Main content -->
   <main class="flex-grow container mx-auto px-6 py-8 max-w-4xl">
     {{ content }}
   </main>
@@ -48,6 +72,18 @@
       </span>
     </div>
   </footer>
+
+  <script>
+    // Simple toggle for collapsible code blocks
+    function toggleCode(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === "none" || !el.style.display) {
+        el.style.display = "block";
+      } else {
+        el.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
