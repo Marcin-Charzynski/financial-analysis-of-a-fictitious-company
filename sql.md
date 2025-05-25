@@ -45,6 +45,8 @@ ORDER BY month, d.department_name;
 </code></pre>
 </details>
 
+![Monthly Profit Trend by Department](../assets/jupyter_notebooks_charts/department-monthly-profit-trend-facet.png)
+
 ---
 
 ### 2. Average Employee Compensation by Department
@@ -66,6 +68,8 @@ GROUP BY d.department_name
 ORDER BY avg_base_salary DESC;
 </code></pre>
 </details>
+
+![Average Base Salary by Department](../assets/jupyter_notebooks_charts/avg-base-salary-by-department-bar.png)
 
 ---
 
@@ -89,6 +93,8 @@ ORDER BY d.department_name, avg_allocation_percentage DESC;
 </code></pre>
 </details>
 
+![Average Project Allocation % by Department](../assets/jupyter_notebooks_charts/avg-project-allocation-by-department-bar.png)
+
 ---
 
 ### 4. Employee Hiring Trends by Department and Year
@@ -108,6 +114,8 @@ GROUP BY d.department_name, hire_year
 ORDER BY d.department_name, hire_year;
 </code></pre>
 </details>
+
+![Employee Hires per Year by Department](../assets/jupyter_notebooks_charts/employee-hires-per-year-by-department-bar.png)
 
 ---
 
