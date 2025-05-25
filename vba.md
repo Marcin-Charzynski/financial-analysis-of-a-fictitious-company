@@ -18,8 +18,7 @@ Automated monthly reports using **Excel VBA**, helping to reduce manual steps in
 
 <details>
 <summary>Click to view code</summary>
-
-```vba
+<pre class="overflow-x-auto bg-gray-800 text-green-400 p-4 rounded-md text-sm font-mono"><code class="language-vba">
 Sub MonthlyReport()
 
     Dim wsData As Worksheet
@@ -80,5 +79,5 @@ Sub MonthlyReport()
     MsgBox "Monthly report generated on sheet 'Report'.", vbInformation
 
 End Sub
-```
+</code></pre>
 </details>
