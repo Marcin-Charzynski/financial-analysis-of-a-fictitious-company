@@ -4,17 +4,25 @@ title: Financial Analysis Portfolio
 permalink: /
 ---
 
-# Financial Analysis Portfolio
+# 💼 Financial Analysis Portfolio
 
-Welcome! This site presents selected projects focused on financial data processing, automation, and reporting.
+Welcome to my portfolio showcasing selected projects that demonstrate my analytical thinking, financial reporting, and automation skills — aligned with the expectations for a Financial Analyst role at PwC.
 
 ---
 
-## 📊 Excel Reporting Automation
+## 📊 Excel Reporting Automation (VBA)
 
-Automated Excel workflows using VBA to summarize monthly activity and generate on-demand insights.
+Automated Excel workflows using VBA to streamline monthly reporting and financial summaries.
 
-Here's an example of a macro that takes monthly financial data and generates a summary pivot table:
+Highlights:
+- Creation of dynamic pivot tables summarizing profits by month and department.
+- Data preprocessing (e.g. calculating profit) directly in VBA.
+- Clean sheet recreation and formatting for end-user delivery.
+
+[View VBA Code Sample ⬇](#vba-example)
+
+<details>
+<summary>Click to view VBA code</summary>
 
 ```vba
 Sub MonthlyReport()
@@ -78,7 +86,7 @@ Sub MonthlyReport()
 
 End Sub
 
-
+</details>
 
 ---
 

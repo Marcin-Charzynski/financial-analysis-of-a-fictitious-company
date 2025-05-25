@@ -8,14 +8,8 @@
   <!-- Tailwind CDN for quick use -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Optional: set body bg and font -->
-  <style>
-    body {
-      @apply bg-gray-50 text-gray-800 font-sans;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen bg-gray-50 text-gray-800 font-sans leading-relaxed antialiased">
 
   <!-- Navigation -->
     <nav class="bg-white shadow-md">
@@ -45,10 +39,13 @@
     {{ content }}
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t py-4 mt-12">
-    <div class="container mx-auto px-4 text-center text-sm text-gray-500">
-      &copy; {{ 'now' | date: '%Y' }} Financial Analysis Portfolio. All rights reserved.
+  <footer class="bg-white border-t mt-12">
+    <div class="container mx-auto px-4 py-6 text-sm text-gray-500 flex justify-between items-center">
+      <span>&copy; {{ site.time | date: "%Y" }} Marcin – Financial Analyst Portfolio</span>
+      <span>
+        <a href="https://linkedin.com/in/yourprofile" class="hover:text-indigo-600">LinkedIn</a> · 
+        <a href="https://github.com/yourusername" class="hover:text-indigo-600">GitHub</a>
+      </span>
     </div>
   </footer>
 
