@@ -119,8 +119,21 @@ ORDER BY d.department_name, hire_year;
 
 ---
 
-### Employee Retention Analysis: Average Tenure by Department
+### 5. Employee Retention Analysis: Average Tenure by Department
 
 Understanding employee retention helps assess workforce stability and departmental health. Here we calculate the average tenure of employees in years per department.
+
+<details>
+<summary>Click to view code</summary>
+<pre class="overflow-x-auto bg-gray-800 text-green-400 p-4 rounded-md text-sm font-mono"><code class="language-sql">
+SELECT
+    d.department_name,
+    AVG(JULIANDAY('now') - JULIANDAY(e.hire_date)) / 365.25 AS avg_tenure_years,
+    COUNT(e.employee_id) AS total_employees
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+GROUP BY d.department_name;
+</code></pre>
+</details>
 
 ![Average Employee Tenure by Department](../assets/jupyter_notebooks_charts/employee_tenure_by_department.png)
