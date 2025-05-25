@@ -80,4 +80,5 @@ Sub MonthlyReport()
     MsgBox "Monthly report generated on sheet 'Report'.", vbInformation
 
 End Sub
-</details> ```
+```
+</details>
