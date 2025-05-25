@@ -12,16 +12,16 @@ This page documents the SQL-driven analysis performed on a fictional company’s
 
 ## Database Schema Overview
 
-The database `business_finance.db` consists of the following tables:
+The database **business_finance.db** consists of the following tables:
 
 | Table               | Description                                         | Key Columns                                 |
 |---------------------|-----------------------------------------------------|---------------------------------------------|
-| `departments`       | Departments within the company                       | `department_id` (PK), `department_name`     |
-| `employees`         | Employee details                                     | `employee_id` (PK), `full_name`, `department_id` (FK), `hire_date` |
-| `projects`          | Company projects                                     | `project_id` (PK), `project_name`, `department_id` (FK), `start_date`, `end_date` |
-| `project_allocations` | Allocation of employees to projects                 | `allocation_id` (PK), `project_id` (FK), `employee_id` (FK), `allocation_percentage` |
-| `financials`        | Monthly financials per department                     | `id` (PK), `month` (YYYY-MM), `department_id` (FK), `revenue`, `expenses`, `profit`, `margin` |
-| `salaries`          | Employee salary and bonus details                     | `salary_id` (PK), `employee_id` (FK), `base_salary`, `bonus` |
+| **departments**       | Departments within the company                       | **department_id** (PK), **department_name**     |
+| **employees**         | Employee details                                     | **employee_id** (PK), **full_name**, **department_id** (FK), **hire_date** |
+| **projects**          | Company projects                                     | **project_id** (PK), **project_name**, **department_id** (FK), **start_date**, **end_date** |
+| **project_allocations** | Allocation of employees to projects                 | **allocation_id** (PK), **project_id** (FK), **employee_id** (FK), **allocation_percentage** |
+| **financials**        | Monthly financials per department                     | **id** (PK), **month** (YYYY-MM), **department_id** (FK), **revenue**, **expenses**, **profit**, **margin** |
+| **salaries**          | Employee salary and bonus details                     | **salary_id** (PK), **employee_id** (FK), **base_salary**, `bonus` |
 
 ---
 
@@ -122,14 +122,3 @@ To deepen insights, consider adding:
 - **Seasonality in hiring:** Explore if hiring spikes correlate with business cycles or project starts.
 - **Cross-department collaboration:** Analyze employees allocated to projects spanning multiple departments.
 - **Forecasting:** Use historical financials and hiring trends to build predictive models for budgeting and workforce planning.
-
----
-
-## Visualization & Reporting
-
-All queries can be directly executed in SQL to extract actionable datasets, which can then be imported into Python/Pandas for:
-
-- Data cleaning and aggregation
-- Time series and bar chart visualizations
-- Dashboard creation (e.g., with matplotlib, seaborn, or Plotly)
-- Automated reporting and alerts
