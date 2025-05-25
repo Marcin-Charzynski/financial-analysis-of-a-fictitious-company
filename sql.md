@@ -119,14 +119,8 @@ ORDER BY d.department_name, hire_year;
 
 ---
 
-## Additional Analysis Ideas
+### Employee Retention Analysis: Average Tenure by Department
 
-To deepen insights, consider adding:
+Understanding employee retention helps assess workforce stability and departmental health. Here we calculate the average tenure of employees in years per department.
 
-- **Employee retention analysis:** Calculate average tenure and turnover rate per department.
-- **Budget variance tracking:** Compare monthly planned vs actual expenses to identify budget deviations.
-- **Project profitability:** Link project allocations and financials to estimate profit contribution per project.
-- **Bonus distribution patterns:** Analyze bonus amounts by department and performance indicators.
-- **Seasonality in hiring:** Explore if hiring spikes correlate with business cycles or project starts.
-- **Cross-department collaboration:** Analyze employees allocated to projects spanning multiple departments.
-- **Forecasting:** Use historical financials and hiring trends to build predictive models for budgeting and workforce planning.
+![Average Employee Tenure by Department](../assets/jupyter_notebooks_charts/employee_tenure_by_department.png)
