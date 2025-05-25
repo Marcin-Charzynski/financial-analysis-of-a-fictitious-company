@@ -24,9 +24,8 @@ Highlights:
 <details>
 <summary>Click to view VBA code</summary>
 
-```vba
+<pre><code class="language-vba">
 Sub MonthlyReport()
-
     Dim wsData As Worksheet
     Dim wsReport As Worksheet
     Dim lastRow As Long
@@ -34,10 +33,10 @@ Sub MonthlyReport()
     Dim pivotCache As pivotCache
     Dim pivotTable As pivotTable
     Dim dataRange As Range
-    
+
     ' Set worksheet references
     Set wsData = ThisWorkbook.Sheets("Data")
-    
+
     ' Delete old Report if exists
     On Error Resume Next
     Application.DisplayAlerts = False
@@ -83,8 +82,8 @@ Sub MonthlyReport()
     wsReport.Range("A1").Font.Bold = True
 
     MsgBox "Monthly report generated on sheet 'Report'.", vbInformation
-
 End Sub
+</code></pre>
 
 </details>
 
