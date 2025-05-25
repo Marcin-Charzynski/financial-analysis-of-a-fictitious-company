@@ -1,3 +1,9 @@
+---
+layout: page
+title: Financial Analysis Portfolio
+permalink: /
+---
+
 # Financial Analysis Portfolio
 
 Welcome! This site presents selected projects focused on financial data processing, automation, and reporting.

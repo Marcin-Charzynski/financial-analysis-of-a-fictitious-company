@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} - Financial Portfolio</title>
+  
+  <!-- Tailwind CDN for quick use -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Optional: set body bg and font -->
+  <style>
+    body {
+      @apply bg-gray-50 text-gray-800 font-sans;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
+        Finance Portfolio
+      </a>
+      <ul class="flex space-x-6 text-gray-600">
+        <li>
+          <a href="/" 
+             class="hover:text-indigo-600 {% if page.url == '/' or page.url == '/index.html' %}font-bold text-indigo-700{% endif %}">
+             Home
+          </a>
+        </li>
+        <li>
+          <a href="/charts/" 
+             class="hover:text-indigo-600 {% if page.url == '/charts/' %}font-bold text-indigo-700{% endif %}">
+             Charts
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content container -->
+  <main class="flex-grow container mx-auto px-6 py-8 max-w-4xl">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-4 mt-12">
+    <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+      &copy; {{ 'now' | date: '%Y' }} Financial Analysis Portfolio. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
