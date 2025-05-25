@@ -8,7 +8,7 @@ permalink: /charts/
 
 These charts illustrate monthly departmental financial performance across categories like Sales, Marketing, Operations, and IT. Based on a dataset of over 140 entries, each data point includes Expenses, Revenue, Profit, and Profit Margin, broken down by month and department from January 2023 to December 2024.
 
-The visualizations were created in Jupyter Notebook using Python libraries such as `pandas`, `matplotlib`, and `seaborn`.
+The visualizations were created in Jupyter Notebook using Python libraries such as **Pandas**, **Matplotlib**, and **Seaborn**.
 
 ---
 
@@ -38,7 +38,7 @@ The visualizations were created in Jupyter Notebook using Python libraries such 
 
 ## ⚙️ Technologies Used
 
-- Python (`pandas`, `matplotlib`, `seaborn`)
+- Python (**Pandas**, **Matplotlib**, and **Seaborn**)
 - Jupyter Notebooks
 - Exported static charts for web embedding
 - Input data: structured CSV files containing bank transaction records and interest calculations, enriched with exchange rates via external API
