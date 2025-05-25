@@ -14,7 +14,7 @@ Welcome! This site presents selected projects focused on financial data processi
 
 Automated Excel workflows using VBA to summarize monthly activity and generate on-demand insights.
 
-[View VBA Script](/financial-analysis-of-a-fictitious-company/scripts/monthly_report_macro.vba)
+[View VBA Script]({{ site.baseurl }}/scripts/monthly_report_macro.vba)
 
 ---
 
@@ -22,7 +22,7 @@ Automated Excel workflows using VBA to summarize monthly activity and generate o
 
 SQL queries to analyze departmental expenses, identify trends, and support decision-making.
 
-[View SQL](/financial-analysis-of-a-fictitious-company/scripts/cost_analysis.sql)
+[View SQL]({{ site.baseurl }}/scripts/cost_analysis.sql)
 
 ---
 
@@ -30,13 +30,13 @@ SQL queries to analyze departmental expenses, identify trends, and support decis
 
 Interactive prototype visualizing payment statuses and monthly trends.
 
-![Dashboard Preview](/financial-analysis-of-a-fictitious-company/images/dashboard_preview.png)
+![Dashboard Preview]({{ site.baseurl }}/images/dashboard_preview.png)
 
 ---
 
 ## 📎 Resume
 
-> Available on request or [download PDF](/financial-analysis-of-a-fictitious-company/resume.pdf)
+> Available on request or [download PDF]({{ site.baseurl }}/resume.pdf)
 
 ---
 
