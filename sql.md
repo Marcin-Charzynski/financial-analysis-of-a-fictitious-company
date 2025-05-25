@@ -21,7 +21,7 @@ The database **business_finance.db** consists of the following tables:
 | **projects**          | Company projects                                     | **project_id** (PK), **project_name**, **department_id** (FK), **start_date**, **end_date** |
 | **project_allocations** | Allocation of employees to projects                 | **allocation_id** (PK), **project_id** (FK), **employee_id** (FK), **allocation_percentage** |
 | **financials**        | Monthly financials per department                     | **id** (PK), **month** (YYYY-MM), **department_id** (FK), **revenue**, **expenses**, **profit**, **margin** |
-| **salaries**          | Employee salary and bonus details                     | **salary_id** (PK), **employee_id** (FK), **base_salary**, `bonus` |
+| **salaries**          | Employee salary and bonus details                     | **salary_id** (PK), **employee_id** (FK), **base_salary**, **bonus** |
 
 ---
 
