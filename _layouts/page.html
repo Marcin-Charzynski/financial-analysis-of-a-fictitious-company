@@ -26,7 +26,7 @@
       Finance Portfolio
     </a>
 
-    <!-- Back to Portfolio link (always visible) -->
+    <!-- Back to Portfolio (desktop only) -->
     <a href="{{ site.url }}/" class="text-sm text-indigo-500 hover:text-indigo-700 hidden md:inline-flex items-center space-x-1">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -46,34 +46,46 @@
 
   <!-- Menu -->
   <div class="container mx-auto px-4">
-    <ul id="menu" class="hidden md:flex space-x-6 text-gray-600 flex-col md:flex-row absolute md:static bg-white md:bg-transparent left-0 top-16 md:top-auto w-full md:w-auto px-4 md:px-0 py-4 md:py-0 shadow-md md:shadow-none z-50">
+    <ul id="menu" class="hidden md:flex flex-col md:flex-row text-gray-600 absolute md:static bg-white md:bg-transparent left-0 top-16 md:top-auto w-full md:w-auto px-4 md:px-0 py-4 md:py-0 shadow-md md:shadow-none z-50
+                        space-y-2 md:space-y-0 md:space-x-6">
+      <!-- Back to Portfolio (mobile only) -->
+      <li class="md:hidden">
+        <a href="{{ site.url }}/" class="block py-2 text-sm text-indigo-500 hover:text-indigo-700 flex items-center space-x-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+          <span>Back to Portfolio</span>
+        </a>
+      </li>
+
       <li>
         <a href="{{ site.baseurl }}/"
-           class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
+           class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
           Home
         </a>
       </li>
       <li>
         <a href="{{ site.baseurl }}/charts/"
-           class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/charts/' %}font-bold text-indigo-700{% endif %}">
+           class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/charts/' %}font-bold text-indigo-700{% endif %}">
           Financial Charts
         </a>
       </li>
       <li>
         <a href="{{ site.baseurl }}/vba/"
-           class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/vba/' %}font-bold text-indigo-700{% endif %}">
+           class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/vba/' %}font-bold text-indigo-700{% endif %}">
           Excel VBA
         </a>
       </li>
       <li>
         <a href="{{ site.baseurl }}/sql/"
-           class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/sql/' %}font-bold text-indigo-700{% endif %}">
+           class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/sql/' %}font-bold text-indigo-700{% endif %}">
           SQL Analysis
         </a>
       </li>
       <li>
         <a href="{{ site.baseurl }}/powerbi/"
-           class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/powerbi/' %}font-bold text-indigo-700{% endif %}">
+           class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/powerbi/' %}font-bold text-indigo-700{% endif %}">
           Power BI
         </a>
       </li>
