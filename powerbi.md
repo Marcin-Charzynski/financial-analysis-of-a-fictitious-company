@@ -17,6 +17,22 @@ This dashboard project simulates an internal finance analytics tool for a mid-si
 #### 👥 Workforce & Salaries
 - Allocation of employees to projects
 - Salary and bonus breakdown by department
+## DAX Examples for Workforce Allocation Report
+
+<details>
+<summary>Show DAX Code</summary>
+
+<pre><code class="language-dax">
+PctEmployeesByDept = 
+DIVIDE(
+    COUNTROWS(employees),
+    CALCULATE(COUNTROWS(employees), ALL(employees))
+)
+
+TotalComp = employees[base_salary] + employees[bonus]
+</code></pre>
+
+</details>
 
 ## Workforce Allocation Report
 
@@ -37,5 +53,3 @@ This report visualizes the distribution of employees across departments, salary 
 - **DAX**: `YTD_Revenue`, `Cost_Revenue_Ratio`, `RankX`, `Margin_Pct`
 - **Power Query**
 - SQLite-generated data via Python & Faker
-
-> 🔎 Ask for a PDF export, screenshots, or live walkthrough.
