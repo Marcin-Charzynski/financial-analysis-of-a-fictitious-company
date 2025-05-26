@@ -137,3 +137,27 @@ GROUP BY d.department_name;
 </details>
 
 ![Average Employee Tenure by Department](../assets/jupyter_notebooks_charts/employee_tenure_by_department.png)
+
+---
+
+### 6. Budget Variance Tracking: Actual vs Planned Expenses
+
+Monitoring budget variance helps identify overspending and improve future forecasts. Since planned expenses were not in the database, we mock them as 5% higher than actual expenses.
+
+<details>
+<summary>Click to view SQL code</summary>
+<pre class="overflow-x-auto bg-gray-800 text-green-400 p-4 rounded-md text-sm font-mono"><code class="language-sql">
+SELECT
+    month,
+    d.department_name,
+    SUM(financials.expenses) AS actual_expenses
+FROM financials
+JOIN departments d ON financials.department_id = d.department_id
+GROUP BY month, d.department_name
+ORDER BY month, d.department_name;
+</code></pre>
+</details>
+
+Planned expenses were mocked in Python by adding 5% to actual values. Then, the difference (variance) was calculated.
+
+![Monthly Actual vs Planned Expenses by Department](../assets/jupyter_notebooks_charts/monthly_expenses_grid.png)
