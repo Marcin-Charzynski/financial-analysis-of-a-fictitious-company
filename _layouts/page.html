@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} - Financial Portfolio</title>
-  
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.svg" type="image/svg+xml">
 
   <!-- PrismJS for syntax highlighting -->
@@ -15,7 +15,6 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-vba.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
-  
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-800 font-sans leading-relaxed antialiased">
 
@@ -25,34 +24,44 @@
       <a href="{{ site.baseurl }}/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
         Finance Portfolio
       </a>
-      <ul class="flex space-x-6 text-gray-600">
+
+      <!-- Burger Icon -->
+      <button class="md:hidden block text-gray-600 focus:outline-none" id="menu-btn">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Menu -->
+      <ul id="menu" class="hidden md:flex space-x-6 text-gray-600 flex-col md:flex-row absolute md:static bg-white md:bg-transparent left-0 top-16 md:top-auto w-full md:w-auto px-4 md:px-0 py-4 md:py-0 shadow-md md:shadow-none z-50">
         <li>
-          <a href="{{ site.baseurl }}/" 
-             class="hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ site.baseurl }}/"
+             class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
             Home
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/charts/" 
-             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/charts/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ site.baseurl }}/charts/"
+             class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/charts/' %}font-bold text-indigo-700{% endif %}">
             Financial Charts
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/vba/" 
-             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/vba/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ site.baseurl }}/vba/"
+             class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/vba/' %}font-bold text-indigo-700{% endif %}">
             Excel VBA
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/sql/" 
-             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/sql/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ site.baseurl }}/sql/"
+             class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/sql/' %}font-bold text-indigo-700{% endif %}">
             SQL Analysis
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/powerbi/" 
-             class="hover:text-indigo-600 {% if page.url == site.baseurl | append: '/powerbi/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ site.baseurl }}/powerbi/"
+             class="block py-2 md:py-0 hover:text-indigo-600 {% if page.url == site.baseurl | append: '/powerbi/' %}font-bold text-indigo-700{% endif %}">
             Power BI
           </a>
         </li>
@@ -66,7 +75,7 @@
   </main>
 
   <footer class="bg-white border-t mt-12">
-    <div class="container mx-auto px-4 py-6 text-sm text-gray-500 flex justify-between items-center">
+    <div class="container mx-auto px-4 py-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-2">
       <span>&copy; {{ site.time | date: "%Y" }} Marcin – Financial Analyst Portfolio</span>
       <span>
         <a href="https://www.linkedin.com/in/marcin-charzy%C5%84ski/" class="hover:text-indigo-600">LinkedIn</a> · 
@@ -76,14 +85,16 @@
   </footer>
 
   <script>
-    // Simple toggle for collapsible code blocks
+    // Toggle mobile menu
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Optional: Toggle code blocks
     function toggleCode(id) {
       const el = document.getElementById(id);
-      if (el.style.display === "none" || !el.style.display) {
-        el.style.display = "block";
-      } else {
-        el.style.display = "none";
-      }
+      el.style.display = (el.style.display === "none" || !el.style.display) ? "block" : "none";
     }
   </script>
 
