@@ -18,6 +18,15 @@ This dashboard project simulates an internal finance analytics tool for a mid-si
 - Allocation of employees to projects
 - Salary and bonus breakdown by department
 
+## Workforce Allocation Report
+
+This report visualizes the distribution of employees across departments, salary details, and project allocations.
+
+![Workforce Allocation Report](powerbi/workforce_allocation_report.png)
+
+*Figure: Workforce Allocation dashboard showing employee percentage by department, salary breakdowns, and project assignments.*
+
+
 #### 📈 Efficiency Metrics
 - Cost-to-revenue ratios
 - Departmental profit rankings
