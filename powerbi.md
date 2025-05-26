@@ -1,23 +1,32 @@
 ---
 layout: page
-title: Power BI
+title: Power BI Case Study
 permalink: /powerbi/
 ---
 
-## 📈 Power BI Dashboard
+## 🧠 Financial Analytics with Power BI
 
-An interactive dashboard showing payment statuses and monthly trends, combining both **column** and **line** visuals.
+This dashboard project simulates an internal finance analytics tool for a mid-sized business, using real-world KPIs, project allocations, and workforce cost tracking.
 
-### Key Features
+### Key Dashboards
 
-- Dual-axis chart: average days to payment vs. transaction volume.
-- Slicers and filters for department, month, and status.
-- Calculated columns and DAX measures for custom logic.
+#### 📊 Department Performance
+- Monthly revenue, profit, and margin analysis
+- DAX measures for YTD and custom KPIs
 
-### Tools
+#### 👥 Workforce & Salaries
+- Allocation of employees to projects
+- Salary and bonus breakdown by department
 
-- Power BI Desktop
-- DAX & Power Query
-- Excel source files
+#### 📈 Efficiency Metrics
+- Cost-to-revenue ratios
+- Departmental profit rankings
 
-> Want to see it in action? Ask for a live walkthrough or video preview.
+### Tools & Techniques
+
+- **Power BI Desktop**
+- **DAX**: `YTD_Revenue`, `Cost_Revenue_Ratio`, `RankX`, `Margin_Pct`
+- **Power Query**
+- SQLite-generated data via Python & Faker
+
+> 🔎 Ask for a PDF export, screenshots, or live walkthrough.
