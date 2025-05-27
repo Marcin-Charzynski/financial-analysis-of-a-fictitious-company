@@ -79,6 +79,29 @@ This report visualizes the distribution of employees across departments, salary 
 - Cost-to-revenue ratios
 - Departmental profit rankings
 
+A dashboard focused on operational performance, benchmarking, and analytical KPIs.
+
+🔍 Visuals:
+Scatter plot: Revenue vs. Margin % by department
+
+Rank chart: Departments ranked by total profit
+
+Trend line chart: Cost-to-revenue ratio over time
+
+![Workforce Allocation Report](powerbi/department_efficiency.png)
+
+<details> <summary><strong>🔧 DAX Measures Used</strong></summary><br>
+Cost_Revenue_Ratio
+Cost_Revenue_Ratio = DIVIDE(SUM(financials[expenses]), SUM(financials[revenue]))
+
+Total_Profit
+Total_Profit = SUM(financials[profit])
+
+Department_Rank
+Department_Rank = RANKX(ALL(departments), [Total_Profit], , DESC)
+
+</details>
+
 ### Tools & Techniques
 
 - **Power BI Desktop**
