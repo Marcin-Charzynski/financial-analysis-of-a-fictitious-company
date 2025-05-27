@@ -13,6 +13,38 @@ This dashboard project simulates an internal finance analytics tool for a mid-si
 #### 📊 Department Performance
 - Monthly revenue, profit, and margin analysis
 - DAX measures for YTD and custom KPIs
+## Department Financial Performance
+
+This dashboard visualizes key financial metrics across departments, with a focus on revenue, expenses, profit, and margin trends. It reflects real responsibilities like financial reporting, margin review, and profitability analysis.
+
+![Department Financial Performance](powerbi/department_financial_performance.png)
+
+*Figure: Power BI dashboard showing revenue, expenses, profit, and margin trends over time.*
+
+### Key Visuals
+- **Bar chart** of Revenue, Expenses, Profit by Department.
+- **Line chart** showing monthly Profit and Margin % trends (dual-axis).
+- **KPI Cards** for Year-to-Date (YTD) Revenue and Margin.
+
+<details>
+<summary>Show DAX Code</summary>
+
+<pre><code class="language-dax">
+YTD_Revenue = 
+TOTALYTD(
+    SUM(financials[revenue]), 
+    'Date'[Date]
+)
+
+Margin_Pct = 
+DIVIDE(
+    SUM(financials[profit]), 
+    SUM(financials[revenue])
+) * 100
+</code></pre>
+
+</details>
+
 
 #### 👥 Workforce & Salaries
 - Allocation of employees to projects
@@ -50,6 +82,6 @@ This report visualizes the distribution of employees across departments, salary 
 ### Tools & Techniques
 
 - **Power BI Desktop**
-- **DAX**: `YTD_Revenue`, `Cost_Revenue_Ratio`, `RankX`, `Margin_Pct`
+- **DAX**
 - **Power Query**
 - SQLite-generated data via Python & Faker
