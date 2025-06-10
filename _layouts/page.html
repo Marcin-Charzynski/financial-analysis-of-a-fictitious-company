@@ -121,6 +121,24 @@
       el.style.display = (el.style.display === "none" || !el.style.display) ? "block" : "none";
     }
   </script>
+  <script>
+    fetch("https://script.google.com/macros/s/AKfycbxQnisU7CNye7XVl2eKrYQxTciNPCj2LmG8W4PhMrO-X-ynzgmudBTyrjs1ILXwnLpS/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        userAgent: navigator.userAgent,
+        page: location.href,
+        referrer: document.referrer,
+        screen: `${screen.width}x${screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        time: new Date().toISOString()
+      })
+    }).catch(console.error);
+  </script>
 
 </body>
 </html>
